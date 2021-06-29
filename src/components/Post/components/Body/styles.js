@@ -1,9 +1,9 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Dimensions} from "react-native";
 
 const styles = StyleSheet.create({
     image: {
-        width: "100%",
-        height: "100%",
+        width: "100%", // Dimensions.get("window").width
+        height: 500,
     }
 });
 
