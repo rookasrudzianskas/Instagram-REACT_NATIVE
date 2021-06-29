@@ -7,7 +7,7 @@ const Header = ({ imageURI, name }) => {
     return (
         <View style={styles.container}>
             <ProfilePicture uri={imageURI} size={40} />
-            <Text>{name}</Text>
+            <Text style={styles.name}>{name}</Text>
         </View>
     );
 };
