@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
     },
     container: {
         margin: 5,
+    },
+    leftIcons: {
+        flexDirection: "row",
     }
 });
 
