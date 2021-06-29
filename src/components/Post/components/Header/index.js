@@ -7,9 +7,13 @@ import { Entypo } from '@expo/vector-icons';
 const Header = ({ imageURI, name }) => {
     return (
         <View style={styles.container}>
-            <ProfilePicture uri={imageURI} size={40} />
-            <Text style={styles.name}>{name}</Text>
-            <Entypo name="dots-three-vertical" size={20} color="black" />
+            <View style={styles.left}>
+                <ProfilePicture uri={imageURI} size={40} />
+                <Text style={styles.name}>{name}</Text>
+            </View>
+            <View style={styles.right}>
+                <Entypo name="dots-three-vertical" size={20} />
+            </View>
         </View>
     );
 };
