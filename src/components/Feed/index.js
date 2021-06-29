@@ -2,6 +2,7 @@ import React from 'react';
 import {View} from "react-native";
 import { FlatList } from "react-native";
 import Post from "../Post";
+import Stories from "../Stories";
 
 const data = [
 
@@ -42,7 +43,7 @@ const data = [
 const Feed = () => {
     return (
         // renders the list of photos
-        <FlatList data={data} renderItem={({item}) => <Post post={item} />} />
+        <FlatList data={data} renderItem={({item}) => <Post post={item} />} ListHeaderComponent={Stories} />
     );
 };
 
