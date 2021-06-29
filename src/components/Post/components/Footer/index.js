@@ -12,11 +12,11 @@ const Footer = ({ likesCount, caption, postedAt }) => {
 
         <View style={styles.iconsContainer} >
             <View style={styles.leftIcons}>
-                <AntDesign name="hearto" size={24}/>
-                <FontAwesome name="comments-o" size={24} />
-                <Ionicons name="ios-paper-plane-outline" size={24} />
+                <AntDesign name="hearto" size={24} color={"#545454"}/>
+                <FontAwesome name="comments-o" size={24} color={"#545454"} />
+                <Ionicons name="ios-paper-plane-outline" size={24} color={"#545454"} />
             </View>
-                <FontAwesome name="bookmark-o" size={24} />
+                <FontAwesome name="bookmark-o" size={24}  color={"#545454"}/>
             </View>
 
             <Text style={styles.likes}>{likesCount} likes</Text>
