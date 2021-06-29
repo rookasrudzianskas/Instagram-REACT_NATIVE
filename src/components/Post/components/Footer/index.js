@@ -13,6 +13,7 @@ const Footer = ({ likesCount, caption, postedAt }) => {
                 <AntDesign name="hearto" size={24}/>
                 <FontAwesome name="comments-o" size={24} />
                 <Ionicons name="ios-paper-plane-outline" size={24} />
+                <FontAwesome name="bookmark-o" size={24} />
 
             </View>
             <Text style={styles.likes}>{likesCount} likes</Text>
