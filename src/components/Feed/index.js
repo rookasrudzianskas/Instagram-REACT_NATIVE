@@ -7,6 +7,7 @@ import Stories from "../Stories";
 const data = [
 
     {
+        id: '1',
         user: {
             imageURI: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg',
             name: "Rokas"
@@ -18,6 +19,7 @@ const data = [
     },
 
     {
+        id: '2',
         user: {
             imageURI: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg',
             name: "Rokas"
@@ -29,6 +31,7 @@ const data = [
     },
 
     {
+        id: '3',
         user: {
             imageURI: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg',
             name: "Rokas"
@@ -43,7 +46,7 @@ const data = [
 const Feed = () => {
     return (
         // renders the list of photos
-        <FlatList data={data} renderItem={({item}) => <Post post={item} />} ListHeaderComponent={Stories} />
+        <FlatList data={data} renderItem={({item}) => <Post post={item} />} keyExtractor={({id}) => id} ListHeaderComponent={Stories} />
     );
 };
 
