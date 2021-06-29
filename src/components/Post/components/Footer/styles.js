@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
     },
     leftIcons: {
         flexDirection: "row",
+        width: 100,
+        justifyContent: "space-between"
+    },
+
+    iconsContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
     }
 });
 
