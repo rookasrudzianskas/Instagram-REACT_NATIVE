@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
     leftIcons: {
         flexDirection: "row",
         width: 100,
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+
     },
 
     iconsContainer: {
