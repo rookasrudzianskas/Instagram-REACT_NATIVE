@@ -12,7 +12,7 @@ const Header = ({ imageURI, name }) => {
                 <Text style={styles.name}>{name}</Text>
             </View>
             <View style={styles.right}>
-                <Entypo name="dots-three-vertical" size={20} />
+                <Entypo name="dots-three-vertical" size={16} />
             </View>
         </View>
     );

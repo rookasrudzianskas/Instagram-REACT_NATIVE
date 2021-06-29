@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
 
     right: {
-      marginRight: 10,
+      marginRight: 15,
     },
     name: {
         textAlign: 'center',
