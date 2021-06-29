@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
 
     name: {
         textAlign: 'center',
+        alignSelf: 'center',
+        fontWeight: 'bold',
+        color: '#4f4f4f',
     }
 
 });
