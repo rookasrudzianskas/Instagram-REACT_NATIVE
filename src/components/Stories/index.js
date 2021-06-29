@@ -1,6 +1,6 @@
 import React from "react";
 import Story from "../Story";
-import {View} from "react-native";
+import {View, FlatList} from "react-native";
 
 const data = [
     {
@@ -28,12 +28,8 @@ const data = [
 ]
 const Stories = () => {
     return (
-        <View>
-            <Story imageURI={data[0].imageURI} name={data[0].name} />
-            <Story imageURI={data[1].imageURI} name={data[1].name} />
-            <Story imageURI={data[2].imageURI} name={data[2].name} />
-            <Story imageURI={data[3].imageURI} name={data[3].name} />
-        </View>
+        <FlatList keyExtractor={({name}) => name} data={data} renderItem={({item}) => <Story imageURI={item.imageURI} name={item.name} />} />
+
     )
 }
 
