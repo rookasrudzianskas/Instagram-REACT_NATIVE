@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 
     iconsContainer: {
         flexDirection: "row",
+        padding: 5,
         justifyContent: "space-between",
     }
 });
