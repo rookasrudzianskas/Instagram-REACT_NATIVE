@@ -2,10 +2,10 @@ import React from "react";
 import {Image, View} from "react-native";
 import styles from "./styles";
 
-const ProfilePicture = () => {
+const ProfilePicture = ({ uri }) => {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg'}} />
+            <Image style={styles.image} source={{ uri: uri }} />
         </View>
         )
 }
