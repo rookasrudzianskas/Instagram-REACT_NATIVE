@@ -5,7 +5,7 @@ import ProfilePicture from "../../../ProfilePicture";
 const Header = ({ imageURI, name }) => {
     return (
         <View>
-            <ProfilePicture uri={imageURI} />
+            <ProfilePicture uri={imageURI} size={40} />
             <Text>{name}</Text>
         </View>
     );
