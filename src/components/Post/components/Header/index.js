@@ -1,10 +1,12 @@
 import React from 'react';
 import {Text, View} from "react-native";
+import ProfilePicture from "../../../ProfilePicture";
 
-const Header = () => {
+const Header = ({ imageURI, name }) => {
     return (
         <View>
-            <Text>Header</Text>
+            <ProfilePicture uri={imageURI} />
+            <Text>{name}</Text>
         </View>
     );
 };
