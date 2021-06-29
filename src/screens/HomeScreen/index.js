@@ -9,8 +9,9 @@ const post = {
         name: "Rokas"
     },
     imageURI: 'https://i.pinimg.com/originals/89/98/16/899816edb81459f39a5604ae711eae43.jpg',
-
-
+    caption: "Amazing City #instagram",
+    likesCount: 1234,
+    postedAt: '6 minutes ago',
 }
 
 const HomeScreen = () => {
