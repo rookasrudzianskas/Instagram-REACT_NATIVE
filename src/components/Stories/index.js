@@ -28,8 +28,7 @@ const data = [
 ]
 const Stories = () => {
     return (
-        <FlatList keyExtractor={({name}) => name} data={data} renderItem={({item}) => <Story imageURI={item.imageURI} name={item.name} />} />
-
+        <FlatList keyExtractor={({name}) => name} orientation={'horizontal'} data={data} renderItem={({item}) => <Story imageURI={item.imageURI} name={item.name} />} />
     )
 }
 
