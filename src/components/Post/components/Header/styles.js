@@ -8,9 +8,12 @@ const styles = StyleSheet.create({
     },
 
     left: {
-        flexDirection: "row"
+        flexDirection: "row",
     },
 
+    right: {
+      marginRight: 10,
+    },
     name: {
         textAlign: 'center',
         alignSelf: 'center',
