@@ -17,6 +17,7 @@ export default function App() {
       <NavigationContainer>
           <StatusBar barStyle="dark-content" />
           <Tab.Navigator>
+              {/* Navigation*/}
               <Tab.Screen name="Home" component={HomeScreen} />
               <Tab.Screen name="Discovery" component={DiscoveryScreen} />
               <Tab.Screen name="Post" component={CreatePostScreen} />
