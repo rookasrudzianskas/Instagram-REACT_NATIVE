@@ -13,6 +13,8 @@ const Footer = ({ likesCount: likesCountProp, caption, postedAt }) => {
 
     const onLikePressed = () => {
         setIsLiked(!isLiked);
+        const amount = isLiked ? -1 : 1;
+        setLikesCount(likesCount + amount);
     }
 
     useEffect(() =>  {
