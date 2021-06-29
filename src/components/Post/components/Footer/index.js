@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Text, View, TouchableWithoutFeedback} from "react-native";
 import styles from "./styles";
 import {AddOutlined} from "@material-ui/icons";
@@ -14,6 +14,10 @@ const Footer = ({ likesCount: likesCountProp, caption, postedAt }) => {
     const onLikePressed = () => {
         setIsLiked(!isLiked);
     }
+
+    useEffect(() =>  {
+        setLikesCount(likesCountProp);
+    }, []);
 
 
 
