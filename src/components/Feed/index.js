@@ -27,7 +27,7 @@ const data = [
         imageURI: 'https://images.megapixl.com/4486/44864763.jpg',
         caption: "Amazing City #instagram",
         likesCount: 1234,
-        postedAt: '6 minutes ago',
+        postedAt: '5 minutes ago',
     },
 
     {
