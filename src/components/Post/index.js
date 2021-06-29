@@ -9,7 +9,7 @@ const Post = ({post }) => {
         <View>
             <Header imageURI={post.user.imageURI} name={post.user.name} />
             <Body imageURI={post.imageURI} />
-            <Footer />
+            <Footer postedAt={post.postedAt} caption={post.caption} likesCount={post.likesCount}/>
         </View>
     )
 }

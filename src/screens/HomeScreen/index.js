@@ -18,7 +18,7 @@ const HomeScreen = () => {
    return (
       <>
          <Stories />
-          <Post post={post} imageURI={post.imageURI} />
+          <Post post={post} imageURI={post.imageURI} caption={post.caption} likesCount={post.likesCount} postedAt={post.postedAt} />
       </>
 )
 }
