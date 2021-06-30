@@ -66,7 +66,7 @@ const Feed = () => {
     return (
         <SafeAreaView>
         {/*// renders the list of photos*/}
-            <FlatList showsVerticalScrollIndicator ={false} showsHorizontalScrollIndicator={false} data={posts} renderItem={({item}) => <Post post={item} />} keyExtractor={({id}) => id} ListHeaderComponent={Stories} />
+            <FlatList showsVerticalScrollIndicator ={false} showsHorizontalScrollIndicator={false} data={data} renderItem={({item}) => <Post post={item} />} keyExtractor={({id}) => id} ListHeaderComponent={Stories} />
         </SafeAreaView>
     );
 };
