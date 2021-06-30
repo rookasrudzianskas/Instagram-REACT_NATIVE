@@ -3,6 +3,7 @@ import Story from "../UserStoryPreview";
 import {View, FlatList} from "react-native";
 import styles from "./styles";
 import storiesData from "../../data/stories";
+import {API, graphqlOperation} from "aws-amplify";
 
 
 const Stories = () => {
