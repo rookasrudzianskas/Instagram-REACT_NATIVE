@@ -38,6 +38,11 @@ const styles = StyleSheet.create({
         width: 50,
         alignItems: 'center',
         justifyContent: 'center',
+        borderWidth: 1,
+        borderColor: "white",
+        borderRadius: 50,
+        height: 50,
+        marginHorizontal: 10,
     },
     messageButton: {
         width: 50,

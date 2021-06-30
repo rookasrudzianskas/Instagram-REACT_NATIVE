@@ -100,7 +100,7 @@ const StoryScreen = () => {
                         </View>
                         <View style={styles.bottomContainer}>
                             <View style={styles.cameraButton}>
-                                <Feather name="camera" size={35} color="white" />
+                                <Feather name="camera" size={30} color="white" />
                             </View>
                                 <View style={styles.textInputContainer}>
                                     <TextInput />
