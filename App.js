@@ -46,8 +46,9 @@ export default function App() {
               },
           })}
                          tabBarOptions={{
-                             activeTintColor: 'tomato',
+                             activeTintColor: '#000',
                              inactiveTintColor: 'gray',
+                             showLabel: false,
                          }}
                   >
               {/* Navigation*/}
