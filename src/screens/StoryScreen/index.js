@@ -86,12 +86,17 @@ const StoryScreen = () => {
     const activeStory = userStoriesPreview.stories[activeStoryIndex];
 
 
+    console.log(userStoriesPreview.user.imageUri)
 
     return (
         <SafeAreaView style={styles.container}>
                 <TouchableWithoutFeedback onPress={handlePress} >
                     <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
-                        <ProfilePicture uri={activeStory.user.imageUri} />
+                        <ProfilePicture uri={userStoriesPreview.user.imageURI} />
+                        <Text>{userStoriesPreview.user.name}</Text>
+                        <View>
+
+                        </View>
                     </ImageBackground>
                 </TouchableWithoutFeedback>
         </SafeAreaView>
