@@ -9,8 +9,9 @@ import ProfileScreen from "./src/screens/ProfileScreen";
 import 'react-native-gesture-handler';
 import {NavigationContainer} from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import { Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import AntDesign from "react-native-vector-icons/AntDesign";
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -23,21 +24,32 @@ export default function App() {
                   let iconName;
 
                   if (route.name === 'Home') {
-                      iconName = focused
-                          ? 'ios-information-circle'
-                          : 'ios-information-circle-outline';
-                  } else if (route.name === 'Settings') {
-                      iconName = focused ? 'ios-list-box' : 'ios-list';
+                      return <Ionicons name="home-outline" size={size} color={color}/>;
                   }
 
-                  // You can return any component that you like here!
-                  return <Ionicons name={iconName} size={size} color={color} />;
+                  if (route.name === 'Discovery') {
+                      return <Ionicons name="ios-search" size={size} color={color}/>;
+                  }
+
+                  if (route.name === 'Post') {
+                      return <Feather name="plus-square" size={size} color={color}/>
+                  }
+
+                  if (route.name === 'Notifications') {
+                      return <AntDesign name="hearto" size={size} color={color}/>
+                  }
+
+                  if (route.name === 'Profile') {
+                      return <Ionicons name="person-outline" size={size} color={color}/>
+                  }
+
               },
           })}
                          tabBarOptions={{
                              activeTintColor: 'tomato',
                              inactiveTintColor: 'gray',
-                         }}>
+                         }}
+                  >
               {/* Navigation*/}
               <Tab.Screen name="Home" component={HomeScreen} />
               <Tab.Screen name="Discovery" component={DiscoveryScreen} />
