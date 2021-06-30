@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, SafeAreaView} from "react-native";
+import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 
@@ -16,6 +16,7 @@ const StoryScreen = () => {
     useEffect(() => {
         const userId = route.params.userId;
         const userStories = storiesData.find(storiesData => storiesData.user.id === userId);
+        console.log(userStories)
 
         setUserStoriesPreview(userStories);
         setActiveStoryIndex(0);
@@ -23,12 +24,21 @@ const StoryScreen = () => {
 
     useEffect(() =>  {
         setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
-    }, [])
+    }, [activeStoryIndex]);
+
+    if(!activeStory) {
+        return (
+            <SafeAreaView>
+                <ActivityIndicator />
+            </SafeAreaView>
+        )
+
+    }
 
 
     return (
         <SafeAreaView>
-            <Text>Rokas</Text>
+            <ImageBackground source={{uri: activeStory.imageURI}} />
         </SafeAreaView>
     );
 };
