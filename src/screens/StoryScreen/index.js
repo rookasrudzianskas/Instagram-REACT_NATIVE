@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback, Dimensions} from "react-native";
-import {useRoute} from "@react-navigation/native";
+import {useNavigation, useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 import styles from "./styles";
 
@@ -11,12 +11,12 @@ const StoryScreen = () => {
     // const [activeStory, setActiveStory] = useState(null);
 
     const route = useRoute();
+    const userId = route.params.userId;
+    const navigation = useNavigation();
 
 
     useEffect(() => {
-        const userId = route.params.userId;
         const userStories = storiesData.find(storiesData => storiesData.user.id === userId);
-
         setUserStoriesPreview(userStories);
         setActiveStoryIndex(0);
     }, []);
@@ -36,15 +36,26 @@ const StoryScreen = () => {
         }
     }, [activeStoryIndex]);
 
+    const navigateToNextUser = () => {
+        navigation.navigate("Story", {userId: (userId + 1).toString() });
+    }
+
     const handleNextStory = () => {
         if(activeStoryIndex >= userStoriesPreview.stories.length - 1) {
+            navigateToNextUser();
             return;
         }
         setActiveStoryIndex(activeStoryIndex + 1);
     }
 
+    const navigateToPreviousUser = () => {
+        navigation.navigate("Story", {userId: (userId - 1).toString() });
+
+    }
+
     const handlePreviousStory = () => {
         if(activeStoryIndex <= 0) {
+            navigateToPreviousUser();
             return;
         }
         setActiveStoryIndex(activeStoryIndex - 1);
