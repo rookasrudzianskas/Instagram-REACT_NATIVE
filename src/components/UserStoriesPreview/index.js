@@ -7,7 +7,7 @@ import storiesData from "../../data/stories";
 
 const Stories = () => {
     return (
-        <FlatList style={styles.container} showsHorizontalScrollIndicator={false} keyExtractor={({name}) => name} horizontal data={storiesData} renderItem={({item}) => <Story story={item} />} />
+        <FlatList style={styles.container} showsHorizontalScrollIndicator={false} keyExtractor={({user: {id}}) => id} horizontal data={storiesData} renderItem={({item}) => <Story story={item} />} />
     )
 };
 

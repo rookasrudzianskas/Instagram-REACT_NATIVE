@@ -10,7 +10,6 @@ const StoryScreen = () => {
     const [activeStoryIndex, setActiveStoryIndex] = useState(null);
     const [activeStory, setActiveStory] = useState(null);
 
-    console.log(activeStory)
     const route = useRoute();
 
 
