@@ -14,8 +14,14 @@ const Stories = () => {
         fetchStories();
     }, []);
 
-    const fetchStories = () => {
+    const fetchStories = async () => {
+        try {
+            const storiesData = await API.graphql(graphqlOperation(listStorys));
+            console.log("Stories", storiesData);
+            setStories(storiesData.data.listStorys.items);
+        } catch (e) {
 
+        }
     }
 
     return (
