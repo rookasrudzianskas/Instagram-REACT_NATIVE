@@ -8,7 +8,7 @@ const StoryScreen = () => {
 
     const [userStoriesPreview, setUserStoriesPreview] = useState(null);
     const [activeStoryIndex, setActiveStoryIndex] = useState(null);
-    const [activeStory, setActiveStory] = useState(null);
+    // const [activeStory, setActiveStory] = useState(null);
 
     const route = useRoute();
 
@@ -22,28 +22,31 @@ const StoryScreen = () => {
     }, []);
 
     useEffect(() =>  {
-        console.log(activeStoryIndex)
         if(!userStoriesPreview) {
             return;
         }
         if(activeStoryIndex < 0) {
             setActiveStoryIndex(0);
+            return;
         }
 
         if(activeStoryIndex >= userStoriesPreview.stories.length) {
             setActiveStoryIndex(userStoriesPreview.stories.length - 1);
-            return;
+            // return;
         }
-
-        setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
-
     }, [activeStoryIndex]);
 
     const handleNextStory = () => {
+        if(activeStoryIndex >= userStoriesPreview.stories.length - 1) {
+            return;
+        }
         setActiveStoryIndex(activeStoryIndex + 1);
     }
 
     const handlePreviousStory = () => {
+        if(activeStoryIndex <= 0) {
+            return;
+        }
         setActiveStoryIndex(activeStoryIndex - 1);
     }
 
@@ -58,9 +61,7 @@ const StoryScreen = () => {
         }
     }
 
-
-
-    if(!activeStory) {
+    if(!userStoriesPreview) {
         return (
             <SafeAreaView>
                 <ActivityIndicator />
@@ -68,6 +69,10 @@ const StoryScreen = () => {
         )
 
     }
+
+    const activeStory = userStoriesPreview.stories[activeStoryIndex];
+
+
 
     return (
         <SafeAreaView style={styles.container}>
