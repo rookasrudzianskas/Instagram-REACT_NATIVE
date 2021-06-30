@@ -92,8 +92,10 @@ const StoryScreen = () => {
         <SafeAreaView style={styles.container}>
                 <TouchableWithoutFeedback onPress={handlePress} >
                     <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
-                        <ProfilePicture uri={userStoriesPreview.user.imageURI} />
-                        <Text>{userStoriesPreview.user.name}</Text>
+                        <View style={styles.userInfo}>
+                            <ProfilePicture uri={userStoriesPreview.user.imageURI} size={40}/>
+                            <Text  style={styles.userName}>{userStoriesPreview.user.name}</Text>
+                        </View>
                         <View>
 
                         </View>

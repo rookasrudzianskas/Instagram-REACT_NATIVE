@@ -11,6 +11,15 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
         width: "100%",
+    },
+    userInfo: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    userName: {
+        color: "white",
+        fontWeight: "500",
+        fontSize: 18,
     }
 });
 
