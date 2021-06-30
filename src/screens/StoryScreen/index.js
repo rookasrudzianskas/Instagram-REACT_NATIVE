@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback} from "react-native";
+import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback, Dimensions} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 import styles from "./styles";
@@ -22,8 +22,16 @@ const StoryScreen = () => {
         setActiveStoryIndex(0);
     }, []);
 
-    const handlePress = (e) => {
+    const handlePress = (evt) => {
+        const x = evt.nativeEvent.locationX;
+        const screenWidth = Dimensions.get("window").width;
+        console.log(screenWidth)
+        let isRight = false;
+        if(x < screenWidth / 2) {
+            isRight = true;
+        }
 
+        console.log("isRight" + isRight);
     }
 
     useEffect(() =>  {
@@ -44,9 +52,11 @@ const StoryScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
-                <TouchableWithoutFeedback onPress={handlePress} />
-            </ImageBackground>
+                <TouchableWithoutFeedback onPress={handlePress} >
+                    <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
+
+                    </ImageBackground>
+                </TouchableWithoutFeedback>
         </SafeAreaView>
     );
 };
