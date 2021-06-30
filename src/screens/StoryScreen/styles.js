@@ -35,9 +35,13 @@ const styles = StyleSheet.create({
     },
     cameraButton: {
         width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     messageButton: {
         width: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
 
