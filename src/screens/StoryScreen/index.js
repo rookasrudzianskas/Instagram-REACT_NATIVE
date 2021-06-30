@@ -22,16 +22,23 @@ const StoryScreen = () => {
         setActiveStoryIndex(0);
     }, []);
 
+    const handleNextStory = () => {
+
+    }
+
+    const handlePreviousStory = () => {
+
+    }
+
     const handlePress = (evt) => {
-        const x = evt.nativeEvent.locationX;
+        const x = evt.nativeEvent.screenX;
         const screenWidth = Dimensions.get("window").width;
-        console.log(screenWidth)
-        let isRight = false;
+        let isRight = true;
         if(x < screenWidth / 2) {
-            isRight = true;
+            isRight = false;
         }
 
-        console.log("isRight" + isRight);
+        console.log("isRight", isRight);
     }
 
     useEffect(() =>  {
