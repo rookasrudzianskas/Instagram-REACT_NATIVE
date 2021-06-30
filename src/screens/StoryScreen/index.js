@@ -22,12 +22,26 @@ const StoryScreen = () => {
         setActiveStoryIndex(0);
     }, []);
 
-    const handleNextStory = () => {
+    useEffect(() =>  {
+        if(activeStoryIndex < 0) {
+            setActiveStoryIndex(0);
+        }
 
+        if(activeStoryIndex >= userStoriesPreview.stories.length) {
+            setActiveStoryIndex(userStoriesPreview.stories.length - 1);
+        }
+
+        if(userStoriesPreview && userStoriesPreview.stories.length > activeStoryIndex -1){
+            setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
+        }
+    }, [activeStoryIndex]);
+
+    const handleNextStory = () => {
+        setActiveStoryIndex(activeStoryIndex + 1);
     }
 
     const handlePreviousStory = () => {
-
+        setActiveStoryIndex(activeStoryIndex - 1);
     }
 
     const handlePress = (evt) => {
@@ -41,11 +55,6 @@ const StoryScreen = () => {
         }
     }
 
-    useEffect(() =>  {
-        if(userStoriesPreview && userStoriesPreview.stories.length > activeStoryIndex -1){
-            setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
-        }
-    }, [activeStoryIndex]);
 
 
     if(!activeStory) {
