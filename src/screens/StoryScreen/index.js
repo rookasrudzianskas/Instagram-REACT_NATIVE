@@ -3,6 +3,7 @@ import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator, TouchableW
 import {useNavigation, useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 import styles from "./styles";
+import ProfilePicture from "../../components/ProfilePicture";
 
 const StoryScreen = () => {
 
@@ -38,7 +39,7 @@ const StoryScreen = () => {
     }, [activeStoryIndex]);
 
     const navigateToNextUser = () => {
-        navigation.navigate("Story", {userId: (parseInt(userId) + 1).toString() });
+        navigation.push("Story", {userId: (parseInt(userId) + 1).toString() });
     }
 
     const handleNextStory = () => {
@@ -50,7 +51,7 @@ const StoryScreen = () => {
     }
 
     const navigateToPreviousUser = () => {
-        navigation.navigate("Story", {userId: (parseInt(userId) - 1).toString() });
+        navigation.push("Story", {userId: (parseInt(userId) - 1).toString() });
 
     }
 
@@ -90,7 +91,7 @@ const StoryScreen = () => {
         <SafeAreaView style={styles.container}>
                 <TouchableWithoutFeedback onPress={handlePress} >
                     <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
-
+                        <ProfilePicture uri={activeStory.user.imageUri} />
                     </ImageBackground>
                 </TouchableWithoutFeedback>
         </SafeAreaView>
