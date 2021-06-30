@@ -4,6 +4,7 @@ import {Image, View} from "react-native";
 import {Feather, Ionicons} from "@expo/vector-icons";
 import logo from "../assets/images/logo.png";
 import {createStackNavigator} from "@react-navigation/stack";
+import StoryScreen from "../screens/StoryScreen";
 
 const HomeStack = createStackNavigator();
 
@@ -41,6 +42,9 @@ const HomeRoutes = () => {
 
                 }}
             />
+            <HomeStack.Screen name="Story" component={StoryScreen}>
+
+            </HomeStack.Screen>
         </HomeStack.Navigator>
     );
 };

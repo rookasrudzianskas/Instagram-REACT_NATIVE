@@ -1,5 +1,5 @@
 import React from "react";
-import Story from "../Story";
+import Story from "../UserStoryPreview";
 import {View, FlatList} from "react-native";
 import styles from "./styles";
 const data = [
