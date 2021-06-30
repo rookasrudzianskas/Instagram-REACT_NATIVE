@@ -97,6 +97,7 @@ const StoryScreen = () => {
                         <View style={styles.userInfo}>
                             <ProfilePicture uri={userStoriesPreview.user.imageURI} size={40}/>
                             <Text  style={styles.userName}>{userStoriesPreview.user.name}</Text>
+                            <Text  style={styles.postedTime}>{activeStory.postedTime}</Text>
                         </View>
                         <View style={styles.bottomContainer}>
                             <View style={styles.cameraButton}>

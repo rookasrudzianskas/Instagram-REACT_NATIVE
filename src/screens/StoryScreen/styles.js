@@ -56,6 +56,12 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 16,
         // outline: 'none',
+    },
+    postedTime: {
+        color: "#808080",
+        fontSize: 16,
+        marginLeft: 10,
+        fontWeight: "700",
     }
 });
 
