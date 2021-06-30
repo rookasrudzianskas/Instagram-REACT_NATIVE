@@ -42,11 +42,7 @@ const HomeRoutes = () => {
 
                 }}
             />
-            <HomeStack.Screen name="Story" component={StoryScreen} options={{
-                headerShown: false,
-            }}>
 
-            </HomeStack.Screen>
         </HomeStack.Navigator>
     );
 };
