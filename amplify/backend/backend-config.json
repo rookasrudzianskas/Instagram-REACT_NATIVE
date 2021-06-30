@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "instagramappad898268": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
