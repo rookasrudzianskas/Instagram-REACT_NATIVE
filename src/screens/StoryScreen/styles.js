@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         height: 50,
         marginHorizontal: 10,
+        paddingHorizontal: 10
     },
     cameraButton: {
         width: 50,
@@ -48,6 +49,9 @@ const styles = StyleSheet.create({
         width: 50,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    textInput: {
+        height: "100%",
     }
 });
 

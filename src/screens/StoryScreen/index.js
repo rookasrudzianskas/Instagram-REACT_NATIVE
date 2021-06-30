@@ -103,7 +103,9 @@ const StoryScreen = () => {
                                 <Feather name="camera" size={30} color="white" />
                             </View>
                                 <View style={styles.textInputContainer}>
-                                    <TextInput editable placeholder="Send Message"  />
+                                    <TextInput
+                                        editable
+                                        placeholder="Send Message" placeholderTextColor="white" style={styles.textInput}  />
                                 </View>
                             <View style={styles.messageButton}>
                                 <Ionicons name="ios-paper-plane-outline" size={35} color="white" />
