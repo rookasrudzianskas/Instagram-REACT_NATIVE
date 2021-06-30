@@ -25,6 +25,15 @@ function HomeStackScreen() {
                 component={HomeScreen}
                 options={{
                     title: 'Instagram',
+                    headerLeftContainerStyle: {
+                        // backgroundColor: 'white',
+                        marginLeft: 15,
+                    },
+                    headerRightContainerStyle: {
+                        // backgroundColor: 'white',
+                        marginRight: 15,
+                    },
+
                     headerLeft: () => (
                         <View styles={{backgroundColor: 'orange'}}>
                             <Feather name="camera" size={24} color="black" />
