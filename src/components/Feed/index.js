@@ -4,7 +4,7 @@ import { FlatList } from "react-native";
 import Post from "../Post";
 import Stories from "../UserStoriesPreview";
 import {API, graphqlOperation} from "aws-amplify";
-import {listPost} from "../../graphql/queries";
+import { listPosts} from "../../graphql/queries";
 
 const data = [
 
@@ -47,12 +47,26 @@ const data = [
 ]
 const Feed = () => {
 
+    const [posts, setPosts] = useState([]);
 
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    const fetchPosts = async () => {
+        try {
+            const postData = await API.graphql(graphqlOperation(listPosts));
+            setPosts(postData.data.listPosts.items);
+            console.log(postData.data.listPosts.items);
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
 
     return (
         <SafeAreaView>
         {/*// renders the list of photos*/}
-            <FlatList showsVerticalScrollIndicator ={false} showsHorizontalScrollIndicator={false} data={data} renderItem={({item}) => <Post post={item} />} keyExtractor={({id}) => id} ListHeaderComponent={Stories} />
+            <FlatList showsVerticalScrollIndicator ={false} showsHorizontalScrollIndicator={false} data={posts} renderItem={({item}) => <Post post={item} />} keyExtractor={({id}) => id} ListHeaderComponent={Stories} />
         </SafeAreaView>
     );
 };
