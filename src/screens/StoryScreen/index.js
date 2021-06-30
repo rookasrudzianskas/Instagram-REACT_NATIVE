@@ -16,14 +16,15 @@ const StoryScreen = () => {
     useEffect(() => {
         const userId = route.params.userId;
         const userStories = storiesData.find(storiesData => storiesData.user.id === userId);
-        console.log(userStories)
 
         setUserStoriesPreview(userStories);
         setActiveStoryIndex(0);
     }, []);
 
     useEffect(() =>  {
-        setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
+        if(userStoriesPreview && userStoriesPreview.length > activeStoryIndex -1){
+            setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
+        }
     }, [activeStoryIndex]);
 
     if(!activeStory) {
