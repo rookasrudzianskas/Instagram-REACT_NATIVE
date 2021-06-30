@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, View} from "react-native";
 import { FlatList } from "react-native";
 import Post from "../Post";
-import Stories from "../Stories";
+import Stories from "../UserStoriesPreview";
 
 const data = [
 
