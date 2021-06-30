@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
+import styles from "./styles";
 
 const StoryScreen = () => {
 
@@ -39,7 +40,7 @@ const StoryScreen = () => {
 
     return (
         <SafeAreaView>
-            <ImageBackground source={{uri: activeStory.imageURI}} />
+            <ImageBackground source={{uri: activeStory.imageURI}} style={styles.image} />
         </SafeAreaView>
     );
 };
