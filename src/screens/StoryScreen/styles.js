@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+        width: "100%",
+        height: "100%",
     }
 });
 
