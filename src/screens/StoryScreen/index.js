@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator} from "react-native";
+import {View, Text, SafeAreaView, ImageBackground, ActivityIndicator, TouchableWithoutFeedback} from "react-native";
 import {useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 import styles from "./styles";
@@ -22,6 +22,10 @@ const StoryScreen = () => {
         setActiveStoryIndex(0);
     }, []);
 
+    const handlePress = (e) => {
+
+    }
+
     useEffect(() =>  {
         if(userStoriesPreview && userStoriesPreview.stories.length > activeStoryIndex -1){
             setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
@@ -41,6 +45,7 @@ const StoryScreen = () => {
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
+                <TouchableWithoutFeedback onPress={handlePress} />
             </ImageBackground>
         </SafeAreaView>
     );
