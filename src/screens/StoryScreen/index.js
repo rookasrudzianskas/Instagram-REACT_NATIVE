@@ -23,17 +23,20 @@ const StoryScreen = () => {
     }, []);
 
     useEffect(() =>  {
+        if(!userStoriesPreview) {
+            return;
+        }
         if(activeStoryIndex < 0) {
             setActiveStoryIndex(0);
         }
 
         if(activeStoryIndex >= userStoriesPreview.stories.length) {
             setActiveStoryIndex(userStoriesPreview.stories.length - 1);
+            return;
         }
 
-        if(userStoriesPreview && userStoriesPreview.stories.length > activeStoryIndex -1){
-            setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
-        }
+        setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
+
     }, [activeStoryIndex]);
 
     const handleNextStory = () => {
