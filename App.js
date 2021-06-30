@@ -20,7 +20,25 @@ const HomeStack = createStackNavigator();
 function HomeStackScreen() {
     return (
         <HomeStack.Navigator>
-            <HomeStack.Screen name="Home" component={HomeScreen} />
+            <HomeStack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{
+                    title: 'Instagram',
+                    headerLeft: () => (
+                        <View styles={{backgroundColor: 'orange'}}>
+                            <Feather name="camera" size={24} color="black" />
+                        </View>
+                    ),
+
+                    headerRight: () => (
+                        <View styles={{backgroundColor: 'orange'}}>
+                            <Ionicons name="ios-paper-plane-outline" size={24} color="black" />
+                        </View>
+                    ),
+
+                }}
+            />
         </HomeStack.Navigator>
     );
 }
