@@ -4,7 +4,11 @@ import { StyleSheet, View, Image, Text, SafeAreaView } from 'react-native';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from "@react-navigation/native";
 import Router from "./src/router";
-import { withAuthenticator } from 'aws-amplify-react-native'
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+
+
+Amplify.configure(config);
 
 export default function App() {
   return (
