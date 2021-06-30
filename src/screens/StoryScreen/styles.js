@@ -52,6 +52,9 @@ const styles = StyleSheet.create({
     },
     textInput: {
         height: "100%",
+        color: "white",
+        fontSize: 16,
+        // outline: 'none',
     }
 });
 
