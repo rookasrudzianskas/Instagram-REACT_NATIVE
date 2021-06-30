@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     bottomContainer: {
         flexDirection: "row",
-
+        marginBottom: 20,
     },
     textInputContainer: {
         flex: 1,
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         borderColor: "white",
         borderRadius: 50,
         height: 50,
+        marginHorizontal: 10,
     },
     cameraButton: {
         width: 50,
