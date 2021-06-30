@@ -6,5 +6,23 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "api": {
+    "instagramapp": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 360,
+              "description": "Instagram app"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      }
+    }
   }
 }
