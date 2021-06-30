@@ -6,7 +6,6 @@ import {useNavigation} from "@react-navigation/native";
 
 const Story = (props) => {
 
-    console.log(props);
 
     const {
         story: {
@@ -18,7 +17,6 @@ const Story = (props) => {
         }
     } = props;
 
-    console.log(imageURI)
 
     const navigation = useNavigation();
 
