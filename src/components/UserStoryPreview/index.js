@@ -3,7 +3,6 @@ import {Text, TouchableOpacity, View} from "react-native";
 import ProfilePicture from "../ProfilePicture";
 import styles from "./style"
 import {useNavigation} from "@react-navigation/native";
-import storiesData from "../../data/stories";
 
 const Story = ({ imageURI, name }) => {
 
