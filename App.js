@@ -16,46 +16,6 @@ const Tab = createBottomTabNavigator();
 import { createStackNavigator } from '@react-navigation/stack';
 import logo from "./src/assets/images/logo.png";
 
-const HomeStack = createStackNavigator();
-
-function HomeStackScreen() {
-    return (
-        <HomeStack.Navigator>
-            <HomeStack.Screen
-                name="Home"
-                component={HomeScreen}
-                options={{
-                    title: 'Instagram',
-                    headerLeftContainerStyle: {
-                        // backgroundColor: 'white',
-                        marginLeft: 15,
-                    },
-                    headerRightContainerStyle: {
-                        // backgroundColor: 'white',
-                        marginRight: 15,
-                    },
-
-                    headerLeft: () => (
-                        <View styles={{backgroundColor: 'orange'}}>
-                            <Feather name="camera" size={24} color="black" />
-                        </View>
-                    ),
-
-                    headerTitle: () => (
-                        <Image source={logo} style={{width: 135, resizeMode: "contain"}} />
-                    ),
-                    headerRight: () => (
-                        <View styles={{backgroundColor: 'orange'}}>
-                            <Ionicons name="ios-paper-plane-outline" size={24} color="black" />
-                        </View>
-                    ),
-
-                }}
-            />
-        </HomeStack.Navigator>
-    );
-}
-
 export default function App() {
   return (
 
