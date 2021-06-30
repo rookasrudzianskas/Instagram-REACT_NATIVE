@@ -1,7 +1,6 @@
 projects:
   instagramapp:
-    schemaPath: >-
-      Users/rookasrudzianskas/Documents/REACT_NATIVE/REACT_IG/instagram-app/graphql/schema.json
+    schemaPath: amplify/backend/api/instagramapp/build/schema.graphql
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -11,3 +10,6 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
+extensions:
+  amplify:
+    version: 3
