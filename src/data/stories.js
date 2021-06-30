@@ -1,6 +1,7 @@
 export default [
     {
         user: {
+            id: '1',
             imageURI: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg',
             name: 'Rokas',
 
@@ -23,6 +24,7 @@ export default [
 
     {
         user: {
+            id: '2',
             imageURI: 'https://randomuser.me/api/portraits/men/18.jpg',
             name: 'John',
 
@@ -45,6 +47,7 @@ export default [
 
     {
         user: {
+            id: '3',
             imageURI: 'https://randomuser.me/api/portraits/men/28.jpg',
             name: 'James',
 
@@ -67,6 +70,7 @@ export default [
 
     {
         user: {
+            id: '4',
             imageURI: 'https://randomuser.me/api/portraits/men/29.jpg',
             name: 'Tim',
 
@@ -89,6 +93,7 @@ export default [
 
     {
         user: {
+            id: '5',
             imageURI: 'https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK_400x400.jpg',
             name: 'Bronson',
 
@@ -111,6 +116,7 @@ export default [
 
     {
         user: {
+            id: '6',
             imageURI: 'https://randomuser.me/api/portraits/men/18.jpg',
             name: 'Naz',
 
@@ -133,6 +139,7 @@ export default [
 
     {
         user: {
+            id: '7',
             imageURI: 'https://randomuser.me/api/portraits/men/28.jpg',
             name: 'Quazi',
 
@@ -155,6 +162,7 @@ export default [
 
     {
         user: {
+            id: '8',
             imageURI: 'https://randomuser.me/api/portraits/men/29.jpg',
             name: 'Jamie',
 

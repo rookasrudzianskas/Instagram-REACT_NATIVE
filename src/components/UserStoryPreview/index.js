@@ -11,6 +11,7 @@ const Story = (props) => {
     const {
         story: {
             user: {
+                id,
                 imageURI,
                 name
             }
@@ -23,7 +24,9 @@ const Story = (props) => {
 
     const onPress = () => {
         // console.log("User Story Pressed");
-        navigation.navigate("Story");
+        navigation.navigate("Story", {
+            userId: id,
+        });
 
     }
     return (
