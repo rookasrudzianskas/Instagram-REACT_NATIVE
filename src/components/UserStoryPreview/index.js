@@ -4,7 +4,20 @@ import ProfilePicture from "../ProfilePicture";
 import styles from "./style"
 import {useNavigation} from "@react-navigation/native";
 
-const Story = ({ imageURI, name }) => {
+const Story = (props) => {
+
+    console.log(props);
+
+    const {
+        story: {
+            user: {
+                imageURI,
+                name
+            }
+        }
+    } = props;
+
+    console.log(imageURI)
 
     const navigation = useNavigation();
 
