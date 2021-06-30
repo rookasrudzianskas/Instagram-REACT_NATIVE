@@ -13,9 +13,22 @@ import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import AntDesign from "react-native-vector-icons/AntDesign";
 const Tab = createBottomTabNavigator();
+import { createStackNavigator } from '@react-navigation/stack';
+
+const HomeStack = createStackNavigator();
+
+function HomeStackScreen() {
+    return (
+        <HomeStack.Navigator>
+            <HomeStack.Screen name="Home" component={HomeScreen} />
+        </HomeStack.Navigator>
+    );
+}
 
 export default function App() {
   return (
+
+
       <NavigationContainer>
           <StatusBar barStyle="dark-content" />
           <Tab.Navigator
@@ -52,7 +65,7 @@ export default function App() {
                          }}
                   >
               {/* Navigation*/}
-              <Tab.Screen name="Home" component={HomeScreen} />
+              <Tab.Screen name="Home" component={HomeStackScreen} />
               <Tab.Screen name="Discovery" component={DiscoveryScreen} />
               <Tab.Screen name="Post" component={CreatePostScreen} />
               <Tab.Screen name="Notifications" component={NotificationsScreen} />
