@@ -32,7 +32,7 @@ const HomeRoutes = () => {
                     ),
 
                     headerTitle: () => (
-                        <Image source={logo} style={{width: 135, resizeMode: "contain"}} />
+                        <Image source={logo} style={{width: 135, height: 50, resizeMode: "contain"}} />
                     ),
                     headerRight: () => (
                         <View styles={{backgroundColor: 'orange'}}>
