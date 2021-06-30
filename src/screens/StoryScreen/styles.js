@@ -9,17 +9,35 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         resizeMode: "cover",
-        justifyContent: "center",
         width: "100%",
+        justifyContent: "space-between",
     },
     userInfo: {
         flexDirection: "row",
         alignItems: "center",
+        marginTop: 10
     },
     userName: {
         color: "white",
-        fontWeight: "500",
+        fontWeight: "700",
         fontSize: 18,
+    },
+    bottomContainer: {
+        flexDirection: "row",
+
+    },
+    textInputContainer: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: "white",
+        borderRadius: 50,
+        height: 50,
+    },
+    cameraButton: {
+        width: 50,
+    },
+    messageButton: {
+        width: 50,
     }
 });
 

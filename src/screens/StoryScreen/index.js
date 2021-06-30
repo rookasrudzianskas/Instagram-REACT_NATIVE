@@ -4,6 +4,8 @@ import {useNavigation, useRoute} from "@react-navigation/native";
 import storiesData from "../../data/stories.js";
 import styles from "./styles";
 import ProfilePicture from "../../components/ProfilePicture";
+import {Feather, Ionicons} from "@expo/vector-icons";
+import {TextInput} from "react-native-gesture-handler";
 
 const StoryScreen = () => {
 
@@ -96,8 +98,16 @@ const StoryScreen = () => {
                             <ProfilePicture uri={userStoriesPreview.user.imageURI} size={40}/>
                             <Text  style={styles.userName}>{userStoriesPreview.user.name}</Text>
                         </View>
-                        <View>
-
+                        <View style={styles.bottomContainer}>
+                            <View style={styles.cameraButton}>
+                                <Feather name="camera" size={24} color="white" />
+                            </View>
+                                <View style={styles.textInputContainer}>
+                                    <TextInput />
+                                </View>
+                            <View style={styles.messageButton}>
+                                <Ionicons name="ios-paper-plane-outline" size={24} color="white" />
+                            </View>
                         </View>
                     </ImageBackground>
                 </TouchableWithoutFeedback>
