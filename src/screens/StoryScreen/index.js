@@ -13,6 +13,7 @@ const StoryScreen = () => {
     const route = useRoute();
     const userId = route.params.userId;
     const navigation = useNavigation();
+    console.log(userId);
 
 
     useEffect(() => {
@@ -37,7 +38,7 @@ const StoryScreen = () => {
     }, [activeStoryIndex]);
 
     const navigateToNextUser = () => {
-        navigation.navigate("Story", {userId: (userId + 1).toString() });
+        navigation.navigate("Story", {userId: (parseInt(userId) + 1).toString() });
     }
 
     const handleNextStory = () => {
@@ -49,7 +50,7 @@ const StoryScreen = () => {
     }
 
     const navigateToPreviousUser = () => {
-        navigation.navigate("Story", {userId: (userId - 1).toString() });
+        navigation.navigate("Story", {userId: (parseInt(userId) - 1).toString() });
 
     }
 
