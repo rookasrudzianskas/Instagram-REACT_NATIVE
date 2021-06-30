@@ -10,8 +10,8 @@ type Post @model @key(name: "byUser", fields: ["userID"]) {
   caption: String!
   image: String!
   userID: ID!
-  likes: Number!
-  user: User @connection(fields: ["userID"])
+  likes: Int!
+  user: User! @connection(fields: ["userID"])
 }
 
 type Story @model @key(name: "byUser", fields: ["userID"]) {
@@ -20,3 +20,8 @@ type Story @model @key(name: "byUser", fields: ["userID"]) {
   userID: ID!
   user: User! @connection(fields: ["userID"])
 }
+
+
+#https://td3lkse2nbb4beuqwsxab54kci.appsync-api.us-east-1.amazonaws.com/graphql endpoint
+#da2-bkfy5y3u7rcmxpyb6qvcvp7rsa
+
