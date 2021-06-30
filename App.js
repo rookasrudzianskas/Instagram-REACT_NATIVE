@@ -7,7 +7,7 @@ import Router from "./src/router";
 
 export default function App() {
   return (
-      <NavigationContainer>
+      <NavigationContainer >
           <StatusBar barStyle="dark-content" />
          <Router />
       </NavigationContainer>
