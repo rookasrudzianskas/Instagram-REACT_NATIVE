@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {SafeAreaView, View} from "react-native";
 import { FlatList } from "react-native";
 import Post from "../Post";
 import Stories from "../UserStoriesPreview";
+import {API, graphqlOperation} from "aws-amplify";
+import {listPost} from "../../graphql/queries";
 
 const data = [
 
@@ -44,6 +46,9 @@ const data = [
 
 ]
 const Feed = () => {
+
+
+
     return (
         <SafeAreaView>
         {/*// renders the list of photos*/}
