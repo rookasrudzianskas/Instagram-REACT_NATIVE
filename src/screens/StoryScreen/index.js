@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text} from "react-native";
+import {View, Text, SafeAreaView} from "react-native";
 
 const StoryScreen = () => {
     return (
-        <Text>
-            Rokas
-        </Text>
+        <SafeAreaView>
+            <Text>Rokas</Text>
+        </SafeAreaView>
     );
 };
 
