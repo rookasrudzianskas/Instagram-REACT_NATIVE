@@ -10,8 +10,10 @@ const Story = ({ imageURI, name }) => {
     }
     return (
         <TouchableHighlight style={styles.container} onPress={onPress}>
-            <ProfilePicture uri={imageURI} />
-            <Text style={styles.name}>{name}</Text>
+            <View>
+                <ProfilePicture uri={imageURI} />
+                <Text style={styles.name}>{name}</Text>
+            </View>
         </TouchableHighlight>
     )
 }
