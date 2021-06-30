@@ -1,6 +1,6 @@
 import { StatusBar } from 'react-native';
 import React from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Image, Text, SafeAreaView } from 'react-native';
 import HomeScreen from "./src/screens/HomeScreen";
 import DiscoveryScreen from "./src/screens/DiscoveryScreen";
 import CreatePostScreen from "./src/screens/CreatePostScreen";
@@ -14,6 +14,7 @@ import { Feather } from '@expo/vector-icons';
 import AntDesign from "react-native-vector-icons/AntDesign";
 const Tab = createBottomTabNavigator();
 import { createStackNavigator } from '@react-navigation/stack';
+import logo from "./src/assets/images/logo.png";
 
 const HomeStack = createStackNavigator();
 
@@ -40,6 +41,9 @@ function HomeStackScreen() {
                         </View>
                     ),
 
+                    headerTitle: () => (
+                        <Image source={logo} style={{width: 135, resizeMode: "contain"}} />
+                    ),
                     headerRight: () => (
                         <View styles={{backgroundColor: 'orange'}}>
                             <Ionicons name="ios-paper-plane-outline" size={24} color="black" />
