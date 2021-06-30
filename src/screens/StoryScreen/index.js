@@ -10,6 +10,7 @@ const StoryScreen = () => {
     const [activeStoryIndex, setActiveStoryIndex] = useState(null);
     const [activeStory, setActiveStory] = useState(null);
 
+    console.log(activeStory)
     const route = useRoute();
 
 
@@ -38,8 +39,8 @@ const StoryScreen = () => {
     }
 
     return (
-        <SafeAreaView>
-            <ImageBackground source={{uri: activeStory.imageURI}} style={styles.image} >
+        <SafeAreaView style={styles.container}>
+            <ImageBackground source={{uri: activeStory.imageUri}} style={styles.image} >
             </ImageBackground>
         </SafeAreaView>
     );
