@@ -40,7 +40,9 @@ const StoryScreen = () => {
 
     return (
         <SafeAreaView>
-            <ImageBackground source={{uri: activeStory.imageURI}} style={styles.image} />
+            <ImageBackground source={{uri: activeStory.imageURI}} style={styles.image} >
+                <Text>Hello</Text>
+            </ImageBackground>
         </SafeAreaView>
     );
 };
