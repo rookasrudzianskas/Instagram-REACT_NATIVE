@@ -23,6 +23,7 @@ const StoryScreen = () => {
     }, []);
 
     useEffect(() =>  {
+        console.log(activeStoryIndex)
         if(!userStoriesPreview) {
             return;
         }
