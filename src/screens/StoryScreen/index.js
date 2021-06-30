@@ -10,7 +10,6 @@ const StoryScreen = () => {
     const [activeStoryIndex, setActiveStoryIndex] = useState(null);
     const [activeStory, setActiveStory] = useState(null);
 
-
     const route = useRoute();
 
 
@@ -23,10 +22,11 @@ const StoryScreen = () => {
     }, []);
 
     useEffect(() =>  {
-        if(userStoriesPreview && userStoriesPreview.length > activeStoryIndex -1){
+        if(userStoriesPreview && userStoriesPreview.stories.length > activeStoryIndex -1){
             setActiveStory(userStoriesPreview.stories[activeStoryIndex]);
         }
     }, [activeStoryIndex]);
+
 
     if(!activeStory) {
         return (
@@ -37,11 +37,9 @@ const StoryScreen = () => {
 
     }
 
-
     return (
         <SafeAreaView>
             <ImageBackground source={{uri: activeStory.imageURI}} style={styles.image} >
-                <Text>Hello</Text>
             </ImageBackground>
         </SafeAreaView>
     );
