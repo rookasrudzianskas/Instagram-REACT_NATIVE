@@ -35,10 +35,10 @@ const StoryScreen = () => {
         const screenWidth = Dimensions.get("window").width;
         let isRight = true;
         if(x < screenWidth / 2) {
-            isRight = false;
+            handlePreviousStory();
+        } else {
+            handleNextStory();
         }
-
-        console.log("isRight", isRight);
     }
 
     useEffect(() =>  {
